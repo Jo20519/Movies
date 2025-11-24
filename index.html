@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mubee Bot</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+          <div class="chat-container">
+              <div id="mood-buttons">
+                 <table>
+                     <thead><b>Choose Mood</b></thead>
+                          <tbody>
+                                <tr>
+                                
+                                    <td><button onclick="sendMood('funny')"> Funny</button></td>
+                                    <td>   <button onclick="sendMood('scary')"> Scary</button></td>
+                                    <td>  <button onclick="sendMood('action')"> Action</button></td>
+                                    <td> <button onclick="sendMood('romantic')"> Romantic</button></td>
+                                    <td> <button onclick="sendMood('animated')">  Animated</button></td>
+                               </tr>
+                         </tbody>
+                   </table>
+              </div>
+              
+        <h2>MUBEE Bot</h2>
+
+        <div id="chat-box"></div>
+
+        <div class="input-area">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button id="send-btn">Send</button>
+        </div>
+        <footer style="text-align:center; font-size:0.8em; margin-top:20px;">
+            This application uses TMDb and the TMDb API but is not endorsed, certified, or otherwise approved by TMDb.
+          </footer>
+          
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

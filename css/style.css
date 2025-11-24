@@ -1,0 +1,170 @@
+body {
+    font-family: Arial;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.chat-container {
+    width: 1000px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#chat-box {
+    height: 350px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.user {
+    text-align: right;
+    margin: 8px 0;
+    color: blue;
+}
+
+.bot {
+    text-align: left;
+    margin: 8px 0;
+    color: green;
+}
+
+.input-area {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+#mood-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#mood-buttons button {
+    padding: 6px 8px;
+    border: none;
+    background: hsl(0, 0%, 5%);
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#mood-buttons button:hover {
+    background: #357abd;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+#chat-container {
+    width: 420px;
+    height: 600px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#chat-box {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+/* USER MESSAGES — Right side, blue bubble */
+#chat-box .user {
+    background: #3182CE;
+    color: white;
+    max-width: 70%;
+    padding: 10px 14px;
+    border-radius: 18px 18px 0 18px;
+    margin: 10px 0;
+    margin-left: auto;
+    text-align: left;
+}
+
+/* BOT MESSAGES — Left side, gray bubble */
+#chat-box .bot {
+    background: #e5e5e5;
+    color: #333;
+    max-width: 70%;
+    padding: 10px 14px;
+    border-radius: 18px 18px 18px 0;
+    margin: 10px 0;
+    margin-right: auto;
+    text-align: left;
+}
+
+#input-area {
+    display: flex;
+    padding: 12px;
+    border-top: 1px solid #ddd;
+}
+
+#user-input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 14px;
+}
+
+#send-btn {
+    margin-left: 10px;
+    padding: 10px 18px;
+    background: #070707;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#send-btn:hover {
+    background: #2563A6;
+}
+
+.movie-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    background: #fff;
+    width: 180px;
+}
+
+.movie-card img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.movie-card p {
+    margin-top: 5px;
+    font-weight: bold;
+    text-align: center;
+}
