@@ -2,43 +2,78 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mubee Bot</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div id="chat-container">
+        <header class="header">
+            <h1>MUBEE Bot</h1>
+            <p class="subtitle">Pick a mood or ask for a movie recommendation.</p>
+            <div class="header-controls">
+                <button id="theme-toggle" type="button" aria-label="Toggle dark mode">🌙</button>
+                <button id="clear-chat" type="button" aria-label="Clear chat history">🗑️</button>
+            </div>
+        </header>
 
-          <div class="chat-container">
-              <div id="mood-buttons">
-                 <table>
-                     <thead><b>Choose Mood</b></thead>
-                          <tbody>
-                                <tr>
-                                
-                                    <td><button onclick="sendMood('funny')"> Funny</button></td>
-                                    <td>   <button onclick="sendMood('scary')"> Scary</button></td>
-                                    <td>  <button onclick="sendMood('action')"> Action</button></td>
-                                    <td> <button onclick="sendMood('romantic')"> Romantic</button></td>
-                                    <td> <button onclick="sendMood('animated')">  Animated</button></td>
-                               </tr>
-                         </tbody>
-                   </table>
-              </div>
-              
-        <h2>MUBEE Bot</h2>
+        <section id=\"mood-buttons\" class=\"mood-buttons\">
+            <span class=\"mood-label\">Choose mood:</span>
+            <div class="mood-button-row">
+                <button type="button" class="mood-button" data-mood="funny" aria-label="Funny movies">Funny</button>
+                <button type="button" class="mood-button" data-mood="scary" aria-label="Scary movies">Scary</button>
+                <button type="button" class="mood-button" data-mood="action" aria-label="Action movies">Action</button>
+                <button type="button" class="mood-button" data-mood="romantic" aria-label="Romantic movies">Romantic</button>
+                <button type="button" class="mood-button" data-mood="animated" aria-label="Animated movies">Animated</button>
+            </div>
+        </section>
 
-        <div id="chat-box"></div>
+        <div id="chat-box" class="chat-box" role="log" aria-live="polite" aria-label="Chat messages"></div>
 
-        <div class="input-area">
-            <input type="text" id="user-input" placeholder="Type your message...">
-            <button id="send-btn">Send</button>
+        <div id="input-area" class="input-area">
+            <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off">
+            <button id="send-btn" type="button">Send</button>
         </div>
-        <footer style="text-align:center; font-size:0.8em; margin-top:20px;">
+
+        <footer class="footer">
             This application uses TMDb and the TMDb API but is not endorsed, certified, or otherwise approved by TMDb.
-          </footer>
-          
+        </footer>
     </div>
+
+    <!-- Loading spinner template -->
+    <template id="loading-template">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <span>Mubee is thinking...</span>
+        </div>
+    </template>
+
+    <!-- Movie card template -->
+    <template id="movie-card-template">
+        <div class="movie-card" tabindex="0">
+            <div class="movie-poster">
+                <img src="" alt="" loading="lazy">
+                <div class="movie-overlay">
+                    <button class="watchlist-btn" type="button" aria-label="Add to watchlist">❤️</button>
+                    <button class="trailer-btn" type="button" aria-label="Watch trailer">🎬</button>
+                </div>
+            </div>
+            <div class="movie-info">
+                <h3 class="movie-title"></h3>
+                <div class="movie-meta">
+                    <span class="movie-year"></span>
+                    <span class="movie-rating"></span>
+                    <span class="movie-runtime"></span>
+                </div>
+                <p class="movie-overview"></p>
+                <div class="movie-actions">
+                    <button class="similar-btn" type="button">Similar Movies</button>
+                    <button class="watch-btn" type="button">Watch Online</button>
+                </div>
+            </div>
+        </div>
+    </template>
 
     <script src="js/script.js"></script>
 </body>
-
 </html>
